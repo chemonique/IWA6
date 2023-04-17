@@ -7,11 +7,10 @@ const hourOfDay = 00;
 const minuteOfDay = 00;
 
 // Only change below this line
-
-if hourOfDay && (minuteOfDay !== null) && (hourOfDay == '00') && (minuteOfDay == '00') {
-	const taxAsDecimal = tax / '100'
-  const startingAfterTax = salary * '1' - taxAsDecimal
-	const balace = starting - transport - food - rent
-}
-	
-console.log(balance.toFixed(3))
+// if hour and minute of day =0 the the day start 
+if (hourOfDay === 0 && minuteOfDay === 0) {
+    const taxAsDecimal = parseInt(tax) / 100;//tax=string->tax=number(integer)number to do maths
+    const startingAfterTax = salary * (1 - taxAsDecimal);//20% of salary
+    const balance = startingAfterTax - transport - food - rent; 
+    console.log('R ' + balance.toFixed(2));
+  }
